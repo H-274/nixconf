@@ -20,12 +20,14 @@
     (inputs.import-tree ./modules) // {
       flake.nixosConfigurations = {
         main = inputs.nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit imports };
           modules = [ ./hosts/main ];
         };
         
         laptop = inputs.nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit imports };
           modules = [ ./hosts/laptop ];
         };
-      }
+      };
     };
 }

@@ -1,6 +1,6 @@
-{ self, ... }: {
+{
   imports =  [
-    "${self}/users/colours"
+    ../../users/colours
   ];
 
   home-manager.users.colours = {

@@ -1,4 +1,4 @@
-{ self, inputs, pkgs, ... }: let
+{ inputs, pkgs, ... }: let
   home = ../../home/laptop;
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

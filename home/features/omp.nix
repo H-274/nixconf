@@ -1,4 +1,4 @@
-{ self, ... }: {
+{
   programs.oh-my-posh.enable = true;
-  programs.oh-my-posh.configFile = "${self}/modules/oh-my-posh/zen.toml";
+  programs.oh-my-posh.configFile = ../../modules/oh-my-posh/zen.toml;
 }
