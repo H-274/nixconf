@@ -1,4 +1,6 @@
-{ self, inputs, ... }: {
+{ self, inputs, ... }: let
+  home = ../../home/laptop;
+in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
 
@@ -6,13 +8,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # Importing configs
-  imports = let
-    modules = self.nixosModules; 
-  in [
-    modules.substituters
-    modules.home-manager
-
-    modules.coloursLaptop
+  imports = [  
+    home/colours
   ];
 
   # System packages
@@ -37,16 +34,6 @@
   services.xserver.xkb = {
     layout = "ca";
     variant = "";
-  };
-
-  # Enable sound with pipewire
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
   };
 
   # Time zone
