@@ -17,5 +17,15 @@
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake
     { inherit inputs; }
-    (inputs.import-tree ./modules);
+    (inputs.import-tree ./modules) // {
+      flake.nixosConfigurations = {
+        main = inputs.nixpkgs.lib.nixosSystem {
+          modules = [ ./hosts/main ];
+        };
+        
+        laptop = inputs.nixpkgs.lib.nixosSystem {
+          modules = [ ./hosts/laptop ];
+        };
+      }
+    };
 }
