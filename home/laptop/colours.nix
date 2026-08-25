@@ -1,9 +1,6 @@
-{ self, ... }: let 
-  users = ../../users; 
-  features = self.homeManagerModules;
-in {
+{ self, ... }: {
   imports =  [
-    users/colours
+    "${self}/users/colours"
   ];
 
   home-manager.users.colours = {
@@ -12,8 +9,8 @@ in {
     programs.home-manager.enable =  true;
 
     imports = [
-      features.omp
-      features.fish
+      ../features/omp.nix
+      ../features/fish.nix
     ];
 
     # Fish configuration with OMP

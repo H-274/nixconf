@@ -1,11 +1,9 @@
-{ inputs, ... }: let 
-  hosts = ../../hosts;
-in {
+{ self, inputs, ... }: {
   flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
-    modules = [ hosts/laptop ];
+    modules = [ "${self}/hosts/laptop" ];
   };
 
   flake.nixosConfigurations.main = inputs.nixpkgs.lib.nixosSystem {
-    modules = [ hosts/main ];
+    modules = [ "${self}/hosts/main" ];
   };
 }
