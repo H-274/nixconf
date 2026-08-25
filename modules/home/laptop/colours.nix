@@ -1,17 +1,17 @@
 {
   flake.nixosModules.coloursLaptop = {
     imports = let 
-      root = ../../../; 
+      users = ../../../users; 
     in [
-      root/users/colours
+      users/colours
     ];
 
     home-manager.users.colours = {
       imports = let
         features = self.homeManagerModules;
       in [
+        features.fish-omp
         features.fish
-        features.omp
       ];
 
       home.stateVersion = "26.05";
