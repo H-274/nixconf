@@ -1,4 +1,4 @@
-<h1 align="center">H-274/nixos</h1>
+<h1 align="center">H-274/nixconf</h1>
 
 This is the little repo I'm using to experiment and configure nixos. I'm using [flakes](https://nixos.wiki/wiki/Flakes) and 
 [flake-parts](https://github.com/hercules-ci/flake-parts). This repo is initially based on this [tutorial](https://www.vimjoyer.com/vid79-parts-wrapped) 
