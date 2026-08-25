@@ -9,7 +9,7 @@ in {
 
   # Importing configs
   imports = [  
-    home/colours
+    home
   ];
 
   # System packages
