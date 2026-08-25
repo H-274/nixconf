@@ -1,4 +1,4 @@
-{
+{ self, ... }: {
   flake.nixosModules.coloursLaptop = {
     imports = let 
       users = ../../../users; 
