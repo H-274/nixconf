@@ -15,7 +15,8 @@
     packages.fish = inputs.wrapper-modules.wrappers.fish.wrap {
       inherit pkgs;
 
-      configFile.content = builtins.readfile ./setup.fish;
+      import self.nixosModules.omp;
+      configFile.content = builtins.readFile ./setup.fish;
     };
   };
 }
