@@ -15,7 +15,7 @@
     packages.fish = inputs.wrapper-modules.wrappers.fish.wrap {
       inherit pkgs;
 
-      configFile.content = builtins.readfile ./setup.fish
+      configFile.content = builtins.readfile ./setup.fish;
     };
   };
 }
