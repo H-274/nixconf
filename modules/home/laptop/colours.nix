@@ -14,9 +14,12 @@
       imports = let
         features = self.homeManagerModules;
       in [
-        features.fish-omp
+        features.omp
         features.fish
       ];
+
+      # Fish configuration with OMP
+      programs.oh-my-posh.enableFishIntegration = true;
     };
   };
 }
