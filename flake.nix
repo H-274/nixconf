@@ -16,18 +16,18 @@
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake
-    { inherit inputs; }
-    (inputs.import-tree ./modules) // {
-      flake.nixosConfigurations = {
-        main = inputs.nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit imports };
-          modules = [ ./hosts/main ];
-        };
+    { inherit inputs; } {
+    imports = [ (inputs.import-tree ./modules) ];
+    flake.nixosConfigurations = {
+      main = inputs.nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/main ];
+      };
         
-        laptop = inputs.nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit imports };
-          modules = [ ./hosts/laptop ];
-        };
+      laptop = inputs.nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/laptop ];
       };
     };
+  };
 }

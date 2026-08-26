@@ -1,6 +1,6 @@
 {
   imports =  [
-    ../../users/colours
+    ../../users/colours.nix
   ];
 
   home-manager.users.colours = {

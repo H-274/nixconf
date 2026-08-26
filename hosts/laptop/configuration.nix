@@ -12,6 +12,8 @@ in {
     home
   ];
 
+  programs.fish.enable = true;
+
   # System packages
   environment.systemPackages = with pkgs; [
     git
