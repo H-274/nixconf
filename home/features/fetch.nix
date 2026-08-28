@@ -3,9 +3,6 @@
 
   programs.fetch = {
     enable = true;
-    separator = " ";
     light = "top-right";
-    speed = 0.5;
-    box = 1;
   };
 }
