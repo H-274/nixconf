@@ -19,7 +19,6 @@ in {
     git
     github-cli
     firefox
-    kitty
   ];
 
   # Networking

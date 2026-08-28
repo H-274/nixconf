@@ -11,9 +11,11 @@
     imports = [
       ../features/omp.nix
       ../features/fish.nix
+      ../features/kitty.nix
     ];
 
-    # Fish configuration with OMP
+    # Integrations
     programs.oh-my-posh.enableFishIntegration = true;
+    programs.kitty.shellIntegration.enableFishIntegration = true;
   };
 }
