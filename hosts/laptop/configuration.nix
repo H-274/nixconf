@@ -12,6 +12,7 @@ in {
     home
   ];
 
+  # todo check why needed when enabled with home-manager
   programs.fish.enable = true;
 
   # System packages
