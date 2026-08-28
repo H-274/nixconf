@@ -1,4 +1,4 @@
-{
+{ inputs, ... }: {
   imports =  [
     ../../users/colours.nix
   ];
@@ -9,6 +9,7 @@
     programs.home-manager.enable =  true;
 
     imports = [
+      inputs.catppuccin.homeModules.catppuccin
       ../features/omp.nix
       ../features/fish.nix
       ../features/kitty.nix
@@ -16,6 +17,8 @@
     ];
 
     # Integrations
+    catppuccin.enable = true;
+    catppuccin.autoEnable = true;
     programs.oh-my-posh.enableFishIntegration = true;
     programs.kitty.shellIntegration.enableFishIntegration = true;
   };
