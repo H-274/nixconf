@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   programs.kitty = {
     enable = true;
     autoThemeFiles.noPreference = "Catppuccin-Mocha";
