@@ -14,6 +14,7 @@
       ../features/fish.nix
       ../features/kitty.nix
       ../features/foot.nix
+      ../features/fetch.nix
     ];
 
     # Integrations

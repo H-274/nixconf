@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     nerd-fonts.atkynson-mono
   ];
@@ -7,7 +8,7 @@
     enable = true;
     settings = {
       main = {
-        font = "Atkynson Mono";
+        font = "AtkynsonMono Nerd Font";
         dpi-aware = "yes";
       };
     };

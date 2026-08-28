@@ -14,6 +14,7 @@
     };
     catppuccin.url = "github:catppuccin/nix";
     hyprland.url = "github:hyprwm/Hyprland";
+    areofyl-fetch.url = "github:areofyl/fetch";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake
