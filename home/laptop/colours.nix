@@ -12,6 +12,7 @@
       ../features/omp.nix
       ../features/fish.nix
       ../features/kitty.nix
+      ../features/foot.nix
     ];
 
     # Integrations
