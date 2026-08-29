@@ -1,6 +1,6 @@
 { inputs, ... }: {
   imports =  [
-    ../../users/colours.nix
+    ../../../users/colours.nix
   ];
 
   home-manager.users.colours = {
@@ -10,15 +10,14 @@
 
     imports = [
       inputs.catppuccin.homeModules.catppuccin
-      ../features/omp.nix
-      ../features/fish.nix
-      ../features/foot.nix
+      ../terminal/foot.nix
+      ../shell/omp.nix
+      ../shell/fish.nix
     ];
 
     # Integrations
     catppuccin.enable = true;
     catppuccin.autoEnable = true;
     programs.oh-my-posh.enableFishIntegration = true;
-    programs.kitty.shellIntegration.enableFishIntegration = true;
   };
 }

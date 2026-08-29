@@ -1,5 +1,5 @@
 { inputs, pkgs, ... }: let
-  home = ../../home/laptop;
+  home = ../../home/profiles/laptop;
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
