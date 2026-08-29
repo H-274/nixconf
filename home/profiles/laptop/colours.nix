@@ -11,8 +11,8 @@
     imports = [
       inputs.catppuccin.homeModules.catppuccin
       ../terminal/foot.nix
-      ../shell/omp.nix
-      ../shell/fish.nix
+      ../terminal/shell/omp.nix
+      ../terminal/shell/fish.nix
     ];
 
     # Integrations
