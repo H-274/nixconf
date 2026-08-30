@@ -10,9 +10,12 @@
 
     imports = [
       inputs.catppuccin.homeModules.catppuccin
-      ../terminal/foot.nix
-      ../terminal/shell/omp.nix
-      ../terminal/shell/fish.nix
+      ../../terminal/foot.nix
+      ../../terminal/shell/omp.nix
+      ../../terminal/shell/fish.nix
+
+      ../../desktop/plasma
+      ../../desktop/hyprland
     ];
 
     # Integrations

@@ -1,5 +1,6 @@
 { inputs, pkgs, ... }: let
   home = ../../home/profiles/laptop;
+  plasma = ../../system/desktop/plasma.nix
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
@@ -10,6 +11,7 @@ in {
   # Importing configs
   imports = [  
     home
+    plasma
   ];
 
   # todo check why needed when enabled with home-manager
@@ -29,14 +31,6 @@ in {
 
   boot.loader.systemd-boot.enable = true;
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # X11 window system
-  services.xserver.enable = true;
-  services.xserver.xkb = {
-    layout = "ca";
-    variant = "";
-  };
 
   # Time zone
   time.timeZone = "America/Toronto";
