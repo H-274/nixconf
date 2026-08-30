@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: let
   home = ../../home/profiles/laptop;
-  plasma = ../../system/desktop/plasma.nix
+  plasma = ../../system/desktop/plasma.nix;
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
