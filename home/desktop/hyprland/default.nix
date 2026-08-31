@@ -19,7 +19,7 @@
         name = lib.baseNameOf e;
         value = { 
           autoLoad = true;
-          source = builtins.readFile e; 
+          content = builtins.readFile e; 
         };
       }) files
     );
