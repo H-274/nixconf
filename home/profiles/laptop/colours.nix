@@ -6,11 +6,14 @@
   home-manager.users.colours = {
     home.stateVersion = "26.05";
       
-    programs.home-manager.enable =  true;
+    programs = {
+      home-manager.enable =  true;
+      texlive.enable = true;
+    };
 
     imports = [
       inputs.catppuccin.homeModules.catppuccin
-      ../../terminal/foot.nix
+      ../../terminal/kitty.nix
       ../../terminal/shell/omp.nix
       ../../terminal/shell/fish.nix
 

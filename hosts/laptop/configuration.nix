@@ -16,6 +16,7 @@ in {
 
   # todo check why needed when enabled with home-manager
   programs.fish.enable = true;
+  programs.hyprland.enable = true;
 
   # System packages
   environment.systemPackages = with pkgs; [
