@@ -1,9 +1,7 @@
-{ self, inputs, ... }: let 
-  inherit (pkgs.stdenv.hostPlatform) system;
-in {
+{ self, inputs, ... }: {
   flake.nixosModules.omp = { pkgs, lib, ... }: {
     environment.systemPackages = [
-      self.packages.${system}.omp
+      self.packages.${pkgs.stdenv.hostPlatform.system}.omp
     ];
   };
 
