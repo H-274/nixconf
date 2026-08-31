@@ -12,9 +12,9 @@ in {
 
   home.file = let 
     configFiles = [
-    ./animations
-    ./binds
-    ./hyprland.lua;
+    ./animations.lua
+    ./binds.lua
+    ./hyprland.lua
     ./rules.lua
     ./settings.lua
     ./smartgams.lua
