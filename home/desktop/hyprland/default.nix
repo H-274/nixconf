@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     # set the Hyprland and XDPH packages to null to use the ones from the NixOS module
@@ -12,7 +12,7 @@
         ./binds.lua
         ./rules.lua
         ./settings.lua
-        ./smartgams.lua
+        ./smartgaps.lua
       ];
     in builtins.listToAttrs (
       map (e: {
