@@ -14,7 +14,7 @@
       ../../terminal/shell/omp.nix
       ../../terminal/shell/fish.nix
 
-      ../../desktop/hyprland
+      ../../hyprland
     ];
 
     # Integrations
