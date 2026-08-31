@@ -14,7 +14,6 @@
       ../../terminal/shell/omp.nix
       ../../terminal/shell/fish.nix
 
-      ../../desktop/plasma
       ../../desktop/hyprland
     ];
 

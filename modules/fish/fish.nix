@@ -1,7 +1,9 @@
-{ self, inputs, ... }: {
+{ self, inputs, ... }: let 
+  inherit (pkgs.stdenv.hostPlatform) system;
+in {
   flake.nixosModules.fish = { pkgs, ... }: {
     environment.systemPackages = [
-      self.packages.${pkgs.stdenv.hostPlatform.system}.fish
+      self.packages.${system}.fish
     ];
   };
 
@@ -9,7 +11,7 @@
     packages.fish = inputs.wrapper-modules.wrappers.fish.wrap {
       inherit pkgs;
       runtimePkgs = [
-        self.packages.${pkgs.stdenv.hostPlatform.system}.omp
+        self.packages.${system}.omp
       ];
 
       configFile.content = builtins.readFile ./setup.fish;
