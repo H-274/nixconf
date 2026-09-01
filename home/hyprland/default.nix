@@ -12,7 +12,6 @@
         ./binds.lua
         ./rules.lua
         ./settings.lua
-        ./smartgaps.lua
       ];
     in builtins.listToAttrs (
       map (e: {
