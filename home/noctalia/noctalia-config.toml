@@ -57,10 +57,25 @@ thickness = 24
 [control_center]
 hidden_tabs = [ "weather", "calendar", "screen-time" ]
 
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
 [dock]
 background_opacity = 0.4999999888241291
 concave_edge_corners = false
 radius = 8
+
+[lockscreen]
+blur_intensity = 0.0
+tint_intensity = 0.0
 
 [nightlight]
 enabled = true
@@ -70,13 +85,17 @@ background_opacity = 0.4999999888241291
 
 [osd]
 background_opacity = 0.4999999888241291
+orientation = "vertical"
+position = "top_right"
+position_vertical = "top_right"
 
 [shell]
 font_family = "AtkynsonMono Nerd Font Mono"
 offline_mode = true
 panel_anchor_bar = "default"
+password_style = "random"
 settings_window_translucent = true
-telemetry_enabled = true
+telemetry_enabled = false
 
     [shell.animation]
     speed = 1.2000000178813934
@@ -105,11 +124,29 @@ telemetry_enabled = true
     wallpaper_position = "top_center"
 
 [theme]
-builtin = "Catppuccin"
+builtin = "Nord"
 community_palette = "Oxocarbon"
-mode = "dark"
+mode = "auto"
 source = "builtin"
 wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "foot", "hyprland", "kitty", "qt", "starship" ]
+
+[wallpaper]
+transition = [ "disc", "fade", "wipe" ]
+
+    [wallpaper.default]
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+
+    [wallpaper.last]
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+
+[widget.caffeine]
+capsule = true
 
 [widget.clock]
 anchor = true
