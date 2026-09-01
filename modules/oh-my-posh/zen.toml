@@ -1,3 +1,4 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 2
 final_space = true
 console_title_template = "{{ .Shell }} in {{ .Folder }}"
@@ -7,15 +8,22 @@ shell_integration = true
 type = "prompt"
 alignment = "left"
 newline = true
+force = true
+
+[[blocks.segments]]
+type = "os"
+style = "plain"
+template = " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+foreground = "p:blue"
 
 [[blocks.segments]]
 type = "path"
 style = "plain"
-background = "transparent"
 foreground = "p:blue"
+background = "transparent"
 template = "{{ .Path }}"
 
-[blocks.segments.properties]
+[blocks.segments.options]
 style = "full"
 
 [[blocks.segments]]
@@ -25,9 +33,8 @@ foreground = "p:subtext-0"
 background = "transparent"
 template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:sky>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
 
-[blocks.segments.properties]
+[blocks.segments.options]
 branch_icon = ""
-commit_icon = "@"
 fetch_status = true
 
 [[blocks]]
@@ -41,8 +48,8 @@ foreground = "p:yellow"
 background = "transparent"
 template = "{{ .FormattedMs }}"
 
-[blocks.segments.properties]
-threshold = 5000
+[blocks.segments.options]
+threshold = 5_000
 
 [[blocks]]
 type = "prompt"
@@ -50,17 +57,24 @@ alignment = "left"
 newline = true
 
 [[blocks.segments]]
-foreground = "p:green"
-style = "plain"
-template = "{{ .UserName }}@{{ .HostName }}"
 type = "session"
+style = "plain"
+foreground = "p:green"
+template = "{{ .UserName }} "
+
+[[blocks.segments]]
+type = "root"
+style = "plain"
+template = " "
+foreground = "p:maroon"
+background = "transparent"
 
 [[blocks.segments]]
 type = "text"
 style = "plain"
 foreground = "p:mauve"
 background = "transparent"
-template = " ❯"
+template = "❯"
 
 [transient_prompt]
 foreground_templates = [
