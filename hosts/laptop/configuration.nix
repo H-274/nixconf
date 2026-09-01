@@ -20,6 +20,7 @@ in {
 
   # System packages
   environment.systemPackages = with pkgs; [
+    nitch
     git
     github-cli
     firefox
