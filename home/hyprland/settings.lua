@@ -12,6 +12,10 @@ gaps_out = 8
 --------------------------
 ---- GENERAL SETTINGS ----
 --------------------------
+hl.on("hyprland.start", function()
+  hl.exec_cmd("noctalia")
+end)
+
 hl.config({
     general = {
         gaps_in = gaps_in,

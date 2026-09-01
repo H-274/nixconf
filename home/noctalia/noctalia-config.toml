@@ -1,0 +1,171 @@
+[bar.default]
+background_opacity = 0.4999999888241291
+capsule_thickness = 0.79999998584389687
+center = [ "workspaces", "clock", "launcher" ]
+concave_edge_corners = false
+end = [ "group:g1", "group:g3", "group:g4", "session" ]
+font_family = "AtkynsonMono Nerd Font"
+margin_edge = 6
+margin_ends = 6
+padding = 12
+radius = 6
+scale = 0.80000000447034836
+shadow = false
+start = [ "control-center", "group:g2" ]
+thickness = 24
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "media", "audio_visualizer" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "cpu", "temp", "ram" ]
+    opacity = 0.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g3"
+    members = [ "volume", "battery" ]
+    opacity = 0.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g4"
+    members = [ "tray", "wallpaper", "notifications" ]
+    opacity = 0.0
+    padding = 6.0
+
+[control_center]
+hidden_tabs = [ "weather", "calendar", "screen-time" ]
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+background_opacity = 0.4999999888241291
+concave_edge_corners = false
+radius = 8
+
+[lockscreen]
+blur_intensity = 0.19999999552965164
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 640.0
+    cy = 538.0
+    output = "eDP-1"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[nightlight]
+enabled = true
+
+[notification]
+background_opacity = 0.4999999888241291
+
+[osd]
+background_opacity = 0.4999999888241291
+
+[shell]
+font_family = "AtkynsonMono Nerd Font Mono"
+offline_mode = true
+panel_anchor_bar = "default"
+settings_window_translucent = true
+telemetry_enabled = true
+
+    [shell.animation]
+    speed = 1.2000000178813934
+
+    [shell.launcher]
+    compact = true
+    fetch_exchange_rates = false
+
+        [shell.launcher.providers.windows]
+        global = true
+
+    [shell.panel]
+    borders = false
+    clipboard_position = "top_center"
+    control_center_placement = "floating"
+    control_center_position = "top_center"
+    list_item_background = true
+    open_near_click_control_center = true
+    open_near_click_wallpaper = true
+    polkit_position = "top_center"
+    session_placement = "floating"
+    session_position = "top_center"
+    shadow = false
+    transparency_mode = "glass"
+    wallpaper_placement = "floating"
+    wallpaper_position = "top_center"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[widget.clock]
+anchor = true
+
+[widget.media]
+album_art_only = true
+hide_when_no_media = true
+title_scroll = "on_hover"

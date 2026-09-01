@@ -18,6 +18,7 @@
       ../../terminal/shell/fish.nix
 
       ../../hyprland
+      ../../noctalia
     ];
 
     # Integrations
