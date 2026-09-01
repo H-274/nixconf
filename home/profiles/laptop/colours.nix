@@ -8,13 +8,13 @@
       
     programs = {
       home-manager.enable =  true;
+      starship.enable = true;
       texlive.enable = true;
     };
 
     imports = [
       inputs.catppuccin.homeModules.catppuccin
       ../../terminal/kitty.nix
-      ../../terminal/shell/omp.nix
       ../../terminal/shell/fish.nix
 
       ../../hyprland
@@ -27,8 +27,9 @@
     };
 
     # Integrations
-    catppuccin.enable = true;
-    catppuccin.autoEnable = true;
-    programs.oh-my-posh.enableFishIntegration = true;
+    programs.starship.enableFishIntegration = true;
+    # catppuccin.enable = true;
+    # catppuccin.autoEnable = true;
+    # programs.oh-my-posh.enableFishIntegration = true;
   };
 }
