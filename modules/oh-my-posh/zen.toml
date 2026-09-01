@@ -13,7 +13,7 @@ force = true
 [[blocks.segments]]
 type = "os"
 style = "plain"
-template = " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+template = "{{ if .WSL }}WSL at {{ end }}{{.Icon}} "
 foreground = "p:blue"
 
 [[blocks.segments]]
