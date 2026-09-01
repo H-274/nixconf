@@ -21,6 +21,11 @@
       ../../noctalia
     ];
 
+    home.file."Pictures/Wallpaper" = {
+      recursive = true;
+      source = ../../wallpapers;
+    };
+
     # Integrations
     catppuccin.enable = true;
     catppuccin.autoEnable = true;
