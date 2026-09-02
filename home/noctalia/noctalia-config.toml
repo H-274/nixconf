@@ -65,6 +65,9 @@ thickness = 24
     opacity = 1.0
     padding = 6.0
 
+[brightness]
+minimum_brightness = 0.04999999888241291
+
 [control_center]
 hidden_tabs = [ "weather", "calendar", "screen-time" ]
 
@@ -84,9 +87,6 @@ widget_order = []
 background_opacity = 0.4999999888241291
 concave_edge_corners = false
 radius = 8
-
-[hooks]
-colors_changed = "kitty +kittens themes --reload-in=all \"Noctalia\""
 
 [location]
 custom_schedule = true
@@ -151,6 +151,15 @@ wallpaper_scheme = "m3-rainbow"
 
 [wallpaper]
 transition = [ "disc", "fade", "wipe" ]
+
+    [wallpaper.default]
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-72woj3.jpg"
+
+    [wallpaper.last]
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-72woj3.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-72woj3.jpg"
 
 [widget.battery]
 show_label = false
