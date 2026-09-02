@@ -1,9 +1,10 @@
 [bar.default]
-background_opacity = 0.4999999888241291
+background_opacity = 0.0
+capsule = true
 capsule_thickness = 0.79999998584389687
-center = [ "workspaces", "clock", "launcher" ]
+center = [ "group:g2" ]
 concave_edge_corners = false
-end = [ "group:g1", "group:g3", "group:g4", "session" ]
+end = [ "group:g3", "group:g4", "group:g5", "session" ]
 font_family = "AtkynsonMono Nerd Font"
 margin_edge = 6
 margin_ends = 6
@@ -11,7 +12,7 @@ padding = 12
 radius = 6
 scale = 0.80000000447034836
 shadow = false
-start = [ "control-center", "group:g2" ]
+start = [ "control-center", "group:g1", "workspaces" ]
 thickness = 24
 
     [[bar.default.capsule_group]]
@@ -20,7 +21,7 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g1"
-    members = [ "media", "audio_visualizer" ]
+    members = [ "cpu", "temp", "ram" ]
     opacity = 1.0
     padding = 6.0
 
@@ -30,8 +31,8 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g2"
-    members = [ "cpu", "temp", "ram" ]
-    opacity = 0.0
+    members = [ "clock" ]
+    opacity = 1.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -40,8 +41,8 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g3"
-    members = [ "volume", "battery" ]
-    opacity = 0.0
+    members = [ "audio_visualizer", "media" ]
+    opacity = 1.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -50,14 +51,25 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g4"
-    members = [ "tray", "wallpaper", "notifications" ]
-    opacity = 0.0
+    members = [ "volume", "input_volume", "battery" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface_variant"
+    id = "g5"
+    members = [ "tray", "notifications", "wallpaper" ]
+    opacity = 1.0
     padding = 6.0
 
 [control_center]
 hidden_tabs = [ "weather", "calendar", "screen-time" ]
 
 [desktop_widgets]
+enabled = false
 schema_version = 2
 widget_order = []
 
@@ -73,9 +85,13 @@ background_opacity = 0.4999999888241291
 concave_edge_corners = false
 radius = 8
 
-[lockscreen]
-blur_intensity = 0.0
-tint_intensity = 0.0
+[hooks]
+colors_changed = "kitty +kittens themes --reload-in=all \"Noctalia\""
+
+[location]
+custom_schedule = true
+sunrise = "07:00"
+sunset = "20:00"
 
 [nightlight]
 enabled = true
@@ -127,23 +143,17 @@ telemetry_enabled = false
 builtin = "Nord"
 community_palette = "Oxocarbon"
 mode = "auto"
-source = "builtin"
-wallpaper_scheme = "m3-content"
+source = "wallpaper"
+wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
-    builtin_ids = [ "foot", "hyprland", "kitty", "qt", "starship" ]
+    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "hyprland", "kitty", "qt", "starship" ]
 
 [wallpaper]
 transition = [ "disc", "fade", "wipe" ]
 
-    [wallpaper.default]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
-
-    [wallpaper.last]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
-
-    [wallpaper.monitors.eDP-1]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+[widget.battery]
+show_label = false
 
 [widget.caffeine]
 capsule = true
@@ -151,7 +161,20 @@ capsule = true
 [widget.clock]
 anchor = true
 
+[widget.cpu]
+show_value = false
+
 [widget.media]
 album_art_only = true
 hide_when_no_media = true
 title_scroll = "on_hover"
+
+[widget.ram]
+show_value = false
+
+[widget.temp]
+show_value = false
+
+[widget.tray]
+hide_passive = false
+match_adjacent_spacing = true
