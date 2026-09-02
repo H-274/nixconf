@@ -29,7 +29,7 @@
     # Integrations
     programs.starship.enableFishIntegration = true;
     programs.kitty = {
-      extraConfig = "import themes/noctalia.conf";
+      extraConfig = "include themes/noctalia.conf";
       shellIntegration.enableFishIntegration = true;
     };
   };
