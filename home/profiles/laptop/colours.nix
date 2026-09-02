@@ -28,8 +28,6 @@
 
     # Integrations
     programs.starship.enableFishIntegration = true;
-    # catppuccin.enable = true;
-    # catppuccin.autoEnable = true;
-    # programs.oh-my-posh.enableFishIntegration = true;
+    programs.kitty.themeFile = "themes/noctalia.conf";
   };
 }
