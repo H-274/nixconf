@@ -24,6 +24,7 @@ in {
     git
     github-cli
     firefox
+    spotify
   ];
 
   # Networking

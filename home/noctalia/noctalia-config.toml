@@ -107,7 +107,7 @@ position_vertical = "top_right"
 
 [shell]
 font_family = "AtkynsonMono Nerd Font Mono"
-offline_mode = true
+offline_mode = false
 panel_anchor_bar = "default"
 password_style = "random"
 settings_window_translucent = true
@@ -140,26 +140,35 @@ telemetry_enabled = false
     wallpaper_position = "top_center"
 
 [theme]
-builtin = "Nord"
+builtin = "Catppuccin"
 community_palette = "Oxocarbon"
-mode = "auto"
-source = "wallpaper"
-wallpaper_scheme = "m3-rainbow"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "hyprland", "kitty", "qt", "starship" ]
+    community_ids = [ "discord", "libreoffice", "yazi" ]
+    enable_builtin_templates = false
+    enable_community_templates = false
 
 [wallpaper]
 transition = [ "disc", "fade", "wipe" ]
 
     [wallpaper.default]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-72woj3.jpg"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
 
     [wallpaper.last]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-72woj3.jpg"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-72woj3.jpg"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+    theme_mode = "auto"
+    wallpaper_scheme = "m3-content"
 
 [widget.battery]
 show_label = false
@@ -186,4 +195,4 @@ show_value = false
 
 [widget.tray]
 hide_passive = false
-match_adjacent_spacing = true
+match_adjacent_spacing = false
