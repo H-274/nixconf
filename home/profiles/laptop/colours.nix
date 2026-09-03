@@ -10,6 +10,11 @@
       home-manager.enable =  true;
       starship.enable = true;
       texlive.enable = true;
+      vesktop.enable = true;
+      yazi = {
+        enable = true;
+        theme = { flavor = { use = "noctalia"; }; };
+      };
     };
 
     imports = [
@@ -25,6 +30,7 @@
       recursive = true;
       source = ../../wallpapers;
     };
+    wayland.windowManager.hyprland.extraConfig = ''require("noctalia")'';
 
     # Integrations
     programs.starship.enableFishIntegration = true;
@@ -32,5 +38,6 @@
       extraConfig = "include themes/noctalia.conf";
       shellIntegration.enableFishIntegration = true;
     };
+    programs.yazi.enableFishIntegration = true;
   };
 }
