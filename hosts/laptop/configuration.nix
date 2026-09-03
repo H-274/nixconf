@@ -9,14 +9,16 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   # Importing configs
-  imports = [  
+  imports = [
+    inputs.noctalia-greeter.nixosModules.default
     home
-    plasma
+    # plasma
   ];
 
   # todo check why needed when enabled with home-manager
   programs.fish.enable = true;
   programs.hyprland.enable = true;
+  programs.noctalia-greeter.enable = true;
 
   # System packages
   environment.systemPackages = with pkgs; [
@@ -33,7 +35,6 @@ in {
   networking.wireless.enable = true;
 
   boot.loader.systemd-boot.enable = true;
-  services.displayManager.sddm.enable = true;
 
   # Time zone
   time.timeZone = "America/Toronto";
