@@ -12,7 +12,7 @@ in {
   imports = [
     inputs.noctalia-greeter.nixosModules.default
     home
-    # plasma
+    plasma
   ];
 
   # todo check why needed when enabled with home-manager

@@ -51,7 +51,7 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g4"
-    members = [ "volume", "input_volume", "battery" ]
+    members = [ "volume", "input_volume" ]
     opacity = 1.0
     padding = 6.0
 
@@ -61,7 +61,7 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g5"
-    members = [ "tray", "notifications", "wallpaper" ]
+    members = [ "tray", "battery", "notifications", "wallpaper" ]
     opacity = 1.0
     padding = 6.0
 
@@ -82,11 +82,6 @@ widget_order = []
     visible = true
 
     [desktop_widgets.widget]
-
-[dock]
-background_opacity = 0.4999999888241291
-concave_edge_corners = false
-radius = 8
 
 [location]
 custom_schedule = true
@@ -110,6 +105,7 @@ font_family = "AtkynsonMono Nerd Font Mono"
 offline_mode = false
 panel_anchor_bar = "default"
 password_style = "random"
+polkit_agent = true
 settings_window_translucent = true
 telemetry_enabled = false
 
@@ -165,10 +161,10 @@ transition = [ "disc", "fade", "wipe" ]
     path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
 
     [[wallpaper.favorite]]
-    palette_source = "wallpaper"
+    builtin_palette = "Catppuccin"
+    palette_source = "builtin"
     path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
-    theme_mode = "auto"
-    wallpaper_scheme = "m3-content"
+    theme_mode = "dark"
 
 [widget.battery]
 show_label = false
