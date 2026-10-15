@@ -23,7 +23,6 @@ in {
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
-  programs.noctalia-greeter.enable = true;
 
   # System packages
   environment.systemPackages = with pkgs; [
@@ -36,6 +35,8 @@ in {
 
   # Battery
   services.upower.enable = true;
+  services.displayManager.noctalia-greeter.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   # Networking
   networking.hostName = "laptop";
