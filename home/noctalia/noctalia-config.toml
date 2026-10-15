@@ -1,7 +1,8 @@
 [bar.default]
-background_opacity = 0.0
+background_opacity = 0.69999998435378075
 capsule = true
-capsule_thickness = 0.79999998584389687
+capsule_opacity = 0.0
+capsule_thickness = 0.84999998472630978
 center = [ "group:g2" ]
 concave_edge_corners = false
 end = [ "group:g3", "group:g4", "group:g5", "session" ]
@@ -22,7 +23,7 @@ thickness = 24
     fill = "surface_variant"
     id = "g1"
     members = [ "cpu", "temp", "ram" ]
-    opacity = 1.0
+    opacity = 0.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -32,7 +33,7 @@ thickness = 24
     fill = "surface_variant"
     id = "g2"
     members = [ "clock" ]
-    opacity = 1.0
+    opacity = 0.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -42,7 +43,7 @@ thickness = 24
     fill = "surface_variant"
     id = "g3"
     members = [ "audio_visualizer", "media" ]
-    opacity = 1.0
+    opacity = 0.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -52,7 +53,7 @@ thickness = 24
     fill = "surface_variant"
     id = "g4"
     members = [ "volume", "input_volume" ]
-    opacity = 1.0
+    opacity = 0.0
     padding = 6.0
 
     [[bar.default.capsule_group]]
@@ -61,8 +62,8 @@ thickness = 24
     enabled = true
     fill = "surface_variant"
     id = "g5"
-    members = [ "tray", "battery", "notifications", "wallpaper" ]
-    opacity = 1.0
+    members = [ "tray", "battery", "notifications" ]
+    opacity = 0.0
     padding = 6.0
 
 [brightness]
@@ -83,10 +84,111 @@ widget_order = []
 
     [desktop_widgets.widget]
 
+[dock]
+background_opacity = 0.4999999888241291
+concave_edge_corners = false
+radius = 8
+
 [location]
 custom_schedule = true
 sunrise = "07:00"
 sunset = "20:00"
+
+[lockscreen]
+blur_intensity = 0.0
+tint_intensity = 0.0
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 128.0
+    box_width = 810.0
+    cx = 640.0
+    cy = 538.0
+    output = "eDP-1"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.80000000000000004
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = false
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 160.0
+    box_width = 160.0
+    cx = 640.0
+    cy = 224.0
+    output = "eDP-1"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        background_radius = 0
+        format = "{:%H}"
+        shadow = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 160.0
+    box_width = 160.0
+    cx = 640.0
+    cy = 352.0
+    output = "eDP-1"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        background_padding = 10
+        background_radius = 0
+        format = "{:%M}"
+        shadow = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 240.0
+    box_width = 176.0
+    cx = 640.0
+    cy = 288.0
+    output = "eDP-1"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = true
+        title = ""
 
 [nightlight]
 enabled = true
@@ -116,6 +218,12 @@ telemetry_enabled = false
     compact = true
     fetch_exchange_rates = false
 
+        [shell.launcher.providers.emoji]
+        global = false
+
+        [shell.launcher.providers.session]
+        prefix = "uwsm-app --"
+
         [shell.launcher.providers.windows]
         global = true
 
@@ -139,6 +247,7 @@ telemetry_enabled = false
 builtin = "Catppuccin"
 community_palette = "Oxocarbon"
 mode = "dark"
+pure_black_dark = true
 source = "builtin"
 wallpaper_scheme = "m3-content"
 
@@ -152,13 +261,13 @@ wallpaper_scheme = "m3-content"
 transition = [ "disc", "fade", "wipe" ]
 
     [wallpaper.default]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-jeeq3q.png"
 
     [wallpaper.last]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-jeeq3q.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-jeeq3q.png"
 
     [[wallpaper.favorite]]
     builtin_palette = "Catppuccin"
@@ -175,6 +284,9 @@ capsule = true
 [widget.clock]
 anchor = true
 
+[widget.control-center]
+glyph = "snowflake"
+
 [widget.cpu]
 show_value = false
 
@@ -190,5 +302,6 @@ show_value = false
 show_value = false
 
 [widget.tray]
+drawer = true
 hide_passive = false
 match_adjacent_spacing = false
