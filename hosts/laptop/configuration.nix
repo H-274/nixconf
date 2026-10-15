@@ -12,12 +12,17 @@ in {
   imports = [
     inputs.noctalia-greeter.nixosModules.default
     home
-    plasma
   ];
 
   # todo check why needed when enabled with home-manager
   programs.fish.enable = true;
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    withUWSM = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
   programs.noctalia-greeter.enable = true;
 
   # System packages
@@ -28,6 +33,9 @@ in {
     firefox
     spotify
   ];
+
+  # Battery
+  services.upower.enable = true;
 
   # Networking
   networking.hostName = "laptop";

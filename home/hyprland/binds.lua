@@ -16,9 +16,9 @@ hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), {
 hl.bind(mod .. " + ALT + mouse:272", hl.dsp.window.resize(), {
     mouse = true
 })
-
+-- dsadsa
 -- app shortcuts
-hl.bind(mod .. " + Return", hl.dsp.exec_cmd("kitty"))
+hl.bind(mod .. " + Return", hl.dsp.exec_cmd("uwsm app -- kitty"))
 
 -- core binds
 hl.bind(mod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
