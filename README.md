@@ -6,7 +6,7 @@ from [vimjoyer](https://www.vimjoyer.com) (though I have deviated a bit). I've a
 
 # Resources
 
-Here's a feuseful resources to use and look at
+Here's a few useful resources to use and look at
 
 - https://nix.dev
 - https://search.nixos.org/packaged

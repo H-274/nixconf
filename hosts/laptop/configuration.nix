@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: let
   home = ../../home/profiles/laptop;
-  plasma = ../../system/desktop/plasma.nix;
+  hyprland = ../../system/desktop/hyprland.nix;
 in {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
@@ -11,18 +11,13 @@ in {
   # Importing configs
   imports = [
     inputs.noctalia-greeter.nixosModules.default
+
     home
+    hyprland
   ];
 
   # todo check why needed when enabled with home-manager
   programs.fish.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
 
   # System packages
   environment.systemPackages = with pkgs; [
@@ -35,8 +30,9 @@ in {
 
   # Battery
   services.upower.enable = true;
-  services.displayManager.noctalia-greeter.enable = true;
   services.power-profiles-daemon.enable = true;
+
+  services.displayManager.noctalia-greeter.enable = true;
 
   # Networking
   networking.hostName = "laptop";

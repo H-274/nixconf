@@ -8,16 +8,16 @@
       
     programs = {
       home-manager.enable =  true;
-      starship.enable = true;
       texlive.enable = true;
       vesktop.enable = true;
-      yazi.enable = true;
     };
 
     imports = [
       inputs.catppuccin.homeModules.catppuccin
       ../../terminal/kitty.nix
       ../../terminal/shell/fish.nix
+      ../../terminal/apps/starship.nix
+      ../../terminal/apps/yazi.nix
 
       ../../hyprland
       ../../noctalia
@@ -31,10 +31,5 @@
     # Integrations
     catppuccin.enable = true;
     catppuccin.autoEnable = true;
-    programs.starship.enableFishIntegration = true;
-    programs.kitty = {
-      shellIntegration.enableFishIntegration = true;
-    };
-    programs.yazi.enableFishIntegration = true;
   };
 }
