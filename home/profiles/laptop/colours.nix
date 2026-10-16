@@ -14,7 +14,7 @@
 
     imports = [
       inputs.catppuccin.homeModules.catppuccin
-      ../../terminal/kitty.nix
+      ../../terminal/kitty
       ../../terminal/shell/fish.nix
       ../../terminal/apps/starship.nix
       ../../terminal/apps/yazi.nix

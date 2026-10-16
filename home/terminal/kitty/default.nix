@@ -6,5 +6,6 @@
       package = pkgs.nerd-fonts.atkynson-mono;
     };
     shellIntegration.enableFishIntegration = config.programs.fish.enable;
+    extraConfig = builtins.readFile ./config.ini;
   };
 }
