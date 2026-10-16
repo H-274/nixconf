@@ -22,8 +22,8 @@ hl.config({
   -- Other configuration settings...
 
   general = {
-    gaps_in = 5,
-    gaps_out = 10,
+    gaps_in = 4,
+    gaps_out = 8,
   },
 
   decoration = {
@@ -38,9 +38,9 @@ hl.config({
     -- Blur effects for transparent backgrounds
     blur = {
       enabled = true,
-      size = 3,
-      passes = 2,
-      vibrancy = 0.1696,
+      size = 8,
+      passes = 1,
+      vibrancy = 0.2,
     },
   },
 })
