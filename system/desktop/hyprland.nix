@@ -1,4 +1,4 @@
-{ inputs, ... }: let
+{ inputs, pkgs, ... }: let
   hyprland-pkgs = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   programs.hyprland = {
