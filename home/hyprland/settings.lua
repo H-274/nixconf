@@ -1,7 +1,3 @@
-hl.on("hyprland.start", function()
-    hl.exec_cmd("noctalia")
-end)
-
 local status, err = pcall(require, "noctalia")
 if not status then
     print("Could not find noctalia hyprland config")
