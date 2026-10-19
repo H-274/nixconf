@@ -1,5 +1,5 @@
 [bar.default]
-background_opacity = 0.69999998435378075
+background_opacity = 0.74999998323619366
 capsule = true
 capsule_opacity = 0.0
 capsule_thickness = 0.84999998472630978
@@ -70,7 +70,7 @@ thickness = 24
 minimum_brightness = 0.04999999888241291
 
 [control_center]
-hidden_tabs = [ "weather", "calendar", "screen-time" ]
+hidden_tabs = []
 
 [desktop_widgets]
 enabled = false
@@ -90,6 +90,7 @@ concave_edge_corners = false
 radius = 8
 
 [location]
+address = "Quebec, Canada"
 custom_schedule = true
 sunrise = "07:00"
 sunset = "20:00"
@@ -194,16 +195,17 @@ widget_order = [
 enabled = true
 
 [notification]
-background_opacity = 0.4999999888241291
+background_opacity = 0.74999998323619366
 
 [osd]
-background_opacity = 0.4999999888241291
+background_opacity = 0.72999998368322849
 orientation = "vertical"
 position = "top_right"
 position_vertical = "top_right"
 
 [shell]
 font_family = "AtkynsonMono Nerd Font Mono"
+launch_apps_as_systemd_services = true
 offline_mode = false
 panel_anchor_bar = "default"
 password_style = "random"
@@ -247,27 +249,27 @@ telemetry_enabled = false
 builtin = "Catppuccin"
 community_palette = "Oxocarbon"
 mode = "dark"
-pure_black_dark = true
+pure_black_dark = false
 source = "builtin"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "hyprland", "kitty", "qt", "starship" ]
-    community_ids = [ "discord", "libreoffice", "yazi" ]
-    enable_builtin_templates = false
+    builtin_ids = [ "gtk3", "hyprland", "kcolorscheme", "kitty", "qt" ]
+    community_ids = []
+    enable_builtin_templates = true
     enable_community_templates = false
 
 [wallpaper]
-transition = [ "disc", "fade", "wipe" ]
+transition = [ "fade", "wipe" ]
 
     [wallpaper.default]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-jeeq3q.png"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
 
     [wallpaper.last]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-jeeq3q.png"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/colours/Pictures/Wallpaper/wallhaven-jeeq3q.png"
+    path = "/home/colours/Pictures/Wallpaper/wallhaven-vqzq98.jpg"
 
     [[wallpaper.favorite]]
     builtin_palette = "Catppuccin"
