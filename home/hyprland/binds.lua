@@ -41,7 +41,7 @@ hl.window_rule({
         class = "dev.noctalia.Noctalia"
     },
     float = true,
-    size = {1080, 920}
+    size = {1180, 620}
 })
 
 -- compositor commands
